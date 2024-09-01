@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: sh -c "python -m bot"
+    env_file:
+      - .env
+    image: webapp-bot-tt
+    container_name: webapp-bot-tt
+    restart: always
+
